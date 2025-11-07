@@ -8,7 +8,13 @@
 <body>
   <header>
     <h1 class="logo">Rhytm</h1>
-    <nav>
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
       <a href="index.html">Головна</a>
       <a href="about.html">Про нас</a>
       <a href="classes.html">Заняття</a>
@@ -47,5 +53,15 @@
   <footer>
     <p>&copy; 2025 Rhytm. Усі права захищено.</p>
   </footer>
+
+  <script>
+    const burger = document.getElementById('burger');
+    const navMenu = document.getElementById('nav-menu');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      navMenu.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
